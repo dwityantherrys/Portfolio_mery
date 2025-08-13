@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mery Diah Candraeni — Sekretaris & Personal Assistant</title>
+  <meta name="description" content="Sekretaris & Personal Assistant berpengalaman: pelaporan 22 cabang, korespondensi, perjalanan dinas, presentasi, arsip digital, dan koordinasi lintas tim." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#2F6F4F;--secondary:#8ABF7A;--accent:#E78FB3;--khaki:#C0A97A;--ink:#1F2937;--muted:#52606D;--bg:#F3EFE7;--card:#FFFFFF;--ring: rgba(47,111,79,.28);--radius:16px;--shadow:0 10px 30px rgba(6,24,12,.10);--shadow-strong:0 24px 48px rgba(6,24,12,.18);--maxw:1160px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body.no-scroll{overflow:hidden} a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);padding:0 24px;margin:0 auto}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border:none;border-radius:999px;padding:12px 18px;font-weight:700;box-shadow:var(--shadow);transition:.25s;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)} .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-strong)}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.75);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #e9ecf1}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:800;color:#0b1d14}
+    .brand-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    nav a{color:#0b1d14;font-weight:700;padding:8px 12px;border-radius:10px}
+    nav a:hover{background:#E4F1EA;text-decoration:none}
+    .menu-btn{display:none}
+    .mobile-menu{display:none;position:absolute;top:64px;left:0;right:0;background:white;border-bottom:1px solid #e9ecf1;box-shadow:var(--shadow)}
+    .mobile-menu.open{display:block}
+    .mobile-menu ul{list-style:none;margin:0;padding:8px}
+    .mobile-menu a{display:block;padding:12px;border-radius:10px;color:#0b1d14;font-weight:700}
+    .mobile-menu a:hover{background:#E4F1EA;text-decoration:none}
+    .hero{padding:80px 0 40px;background:radial-gradient(900px 480px at 90% -10%, rgba(47,111,79,.12), transparent 60%),radial-gradient(900px 480px at 10% -10%, rgba(232,143,179,.10), transparent 60%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .kicker{display:inline-block;background:#E4F1EA;color:var(--primary);font-weight:800;padding:6px 10px;border-radius:999px;font-size:.85rem;margin-bottom:10px;letter-spacing:.2px}
+    .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:8px 0 14px;font-weight:900}
+    .hero p{font-size:1.06rem;color:var(--muted);margin:0 0 22px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 26px}
+    .badge{padding:6px 10px;background:#fff;border:1px solid #e6ecdf;border-radius:999px;font-size:.85rem;color:#0b1d14}
+    .hero-card{background:linear-gradient(180deg,#ffffff 0%,#fdfdfb 100%);border:1px solid #e9ecf1;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;animation:float 6s ease-in-out infinite}
+    .avatar{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:6px solid #fff;box-shadow:var(--shadow-strong)}
+    section{padding:64px 0} .section-title{font-size:clamp(22px,3.6vw,32px);margin:0 0 10px;font-weight:900}
+    .section-sub{color:var(--muted);margin:0 0 26px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .card{background:var(--card);border:1px solid #e9ecf1;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:.25s}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-strong)}
+    .list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .list li{display:flex;gap:10px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:50%;margin-top:8px;background:linear-gradient(135deg,var(--primary),var(--accent))}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:10px}
+    .stat{background:linear-gradient(135deg,#0F2B1E,#173E2C);color:#DFF3E8;border-radius:14px;padding:14px;text-align:center}
+    .stat strong{display:block;font-size:1.2rem;color:#fff}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .work{overflow:hidden;cursor:pointer}
+    .work img{width:100%;height:180px;object-fit:cover;border-radius:12px;transition:transform .5s ease}
+    .work:hover img{transform:scale(1.04)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .tag{font-size:.8rem;padding:4px 8px;border-radius:999px;background:#E4F1EA;color:#0b1d14;border:1px solid #d4e5da}
+    .contact-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    .contact-item{display:flex;gap:12px;align-items:flex-start}
+    .pill{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:#E4F1EA;color:var(--primary);font-weight:700}
+    form input, form textarea{width:100%;padding:12px 14px;border:1px solid #dfe7df;border-radius:12px;font:inherit;background:#fff;outline:none}
+    form input:focus, form textarea:focus{box-shadow:0 0 0 4px var(--ring)} form textarea{min-height:130px;resize:vertical}
+    footer{padding:40px 0;border-top:1px solid #e9ecf1;text-align:center;color:#6b7280}
+    @keyframes float {0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+    .modal{position:fixed;inset:0;background:rgba(15,27,30,.55);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:.25s;z-index:100}
+    .modal.open{opacity:1;pointer-events:auto}
+    .dialog{width:min(960px, 96vw);max-height:92vh;background:#fff;border-radius:18px;box-shadow:var(--shadow-strong);overflow:hidden;border:1px solid #e9ecf1;transform:translateY(12px);transition:transform .25s}
+    .modal.open .dialog{transform:none}
+    .dialog-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;background:linear-gradient(180deg,#f9faf8,#fefefe);border-bottom:1px solid #eef1ea}
+    .dialog-title{font-weight:800}
+    .dialog-close{border:none;background:#E4F1EA;color:#0b1d14;border-radius:10px;padding:6px 10px;font-weight:800;cursor:pointer}
+    .dialog-body{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;padding:16px}
+    .gallery{display:flex;gap:10px;overflow:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+    .gallery img{height:240px;flex:0 0 auto;border-radius:12px;object-fit:cover;scroll-snap-align:start;border:1px solid #e9ecf1}
+    .desc{color:#4b5563}
+    @media (max-width: 960px){
+      .hero-grid, .about-grid, .grid-3, .contact-wrap{grid-template-columns:1fr}
+      .hero{padding-top:28px}
+      nav ul{display:none}
+      .menu-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e9ecf1;border-radius:10px;padding:8px 10px}
+      .avatar{max-width:460px;margin:0 auto;display:block}
+      .dialog-body{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">MC</div>
+        <div>Mery Diah Candraeni</div>
+      </div>
+      <nav aria-label="Utama">
+        <ul>
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" aria-label="Buka menu" onclick="toggleMenu()">☰ Menu</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="container">
+        <ul>
+          <li><a href="#hero" onclick="toggleMenu()">Beranda</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Tentang</a></li>
+          <li><a href="#portfolio" onclick="toggleMenu()">Portofolio</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container hero-grid reveal">
+      <div>
+        <span class="kicker">Sekretaris & Personal Assistant</span>
+        <h1>Mendukung Pimpinan Regional Efektif, Kreatif, dan Dapat Diandalkan</h1>
+        <p>Pengelolaan data, pelaporan 22 cabang, korespondensi resmi, penjadwalan & perjalanan dinas, serta koordinasi lintas tim.<br> 
+          Di Bawah Naungan 3 Atasan, Regional Branch Manager , Finance Regional Manager , dan Deputy COO</p>
+        <div class="badges">
+          <span class="badge">PT Catur Sentosa Adiprana Tbk (2017—Sekarang)</span>
+          <span class="badge">Excel (VLOOKUP), PowerPoint, Word, Access</span>
+          <span class="badge">Koordinasi 22 Cabang</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="#contact">Hubungi Saya</a>
+          <a class="btn ghost" href="#portfolio">Lihat Portofolio</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img class="avatar" alt="Foto profil" src="avatar.png" />
+        <div style="margin-top:14px;color:#6b7280;font-size:.95rem">
+          <strong style="color:#0b1d14">Mery Diah Candraeni</strong><br/>
+          Buluh Dakiring, Bangkalan, Madura · 082232208756 · <a href="mailto:merycandraeni@gmail.com">merycandraeni@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container reveal">
+      <h2 class="section-title">Tentang Saya</h2>
+      <p class="section-sub">Laporan penjualan/omset, rekap finance, presentasi, perjalanan dinas, arsip & korespondensi; berorientasi hasil dan ketepatan waktu.</p>
+      <div class="about-grid">
+        <div class="card">
+          <h3 style="margin-top:0">Keunggulan Utama</h3>
+          <ul class="list">
+            <li><span class="dot"></span><div>Laporan penjualan & omset lintas <strong>22 cabang</strong> (Excel & VLOOKUP)</div></li>
+            <li><span class="dot"></span><div>Rekap data finance bulanan seluruh cabang</div></li>
+            <li><span class="dot"></span><div>Perjalanan dinas: tiket, hotel, Rundown Perjalanan Dinas, & laporan biaya</div></li>
+            <li><span class="dot"></span><div>Fasilitasi rapat: akomodasi, perangkat, konsumsi, & notulen</div></li>
+            <li><span class="dot"></span><div>Arsip digital & surat-menyurat antar cabang/departemen</div></li>
+            <li><span class="dot"></span><div>Presentasi pimpinan dengan PowerPoint</div></li>
+            <li><span class="dot"></span><div>Pembuatan Surat Resmi untuk Kegiatan Internal</div></li>
+
+          </ul>
+          <div class="stats">
+            <div class="stat"><strong>22</strong><span>Cabang</span></div>
+            <div class="stat"><strong>2017+</strong><span>Berpengalaman</span></div>
+            <div class="stat"><strong>Fokus</strong><span>Efisiensi</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Keterampilan</h3>
+          <ul class="list">
+            <li><span class="dot"></span><div>Komunikasi profesional & manajemen waktu</div></li>
+            <li><span class="dot"></span><div>Microsoft Office: <strong>Excel (VLOOKUP)</strong>, PowerPoint, Word, Access</div></li>
+            <li><span class="dot"></span><div>Koordinasi antar departemen & tindak lanjut</div></li>
+            <li><span class="dot"></span><div>Pengarsipan digital & korespondensi resmi</div></li>
+            <li><span class="dot"></span><div>Kepemimpinan, kerja tim, problem solving, kreativitas</div></li>
+          </ul>
+          <div class="card" style="margin-top:14px">
+            <h4 style="margin:0 0 6px">Pendidikan</h4>
+            <div><strong>IBI Stikom Surabaya</strong> — D-III Komputerisasi Perkantoran & Kesekretariatan · IPK 3.79</div>
+          </div>
+          <div class="card" style="margin-top:14px">
+            <h4 style="margin:0 0 6px">Pengalaman Singkat</h4>
+            <div><strong>PT Catur Sentosa Adiprana Tbk</strong> — Regional Administration / Personal Assistant Regional Manager (2017—Sekarang)</div>
+            <div><strong>PT Pelindo Properti Indonesia</strong> — Kerja Praktik (2017)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container reveal">
+      <h2 class="section-title">Contoh Hasil Kerja</h2>
+      <p class="section-sub">Klik salah satu kartu untuk melihat detail dan galeri.</p>
+      <div class="grid-3">
+        <article class="card work" data-title="Laporan Penjualan & Omset 22 Cabang" data-desc="Template Excel dengan VLOOKUP untuk konsolidasi penjualan bulanan lintas cabang; mempermudah monitoring dan pelaporan tepat waktu. Dan melakukan pengolahan data guna keperluan pelaporan data. " data-tags="Excel,VLOOKUP,Pivot,If Else,Pelaporan" data-images="laporan tahunan.jpeg,laporan tahunan chart.jpeg">
+          <img alt="Laporan penjualan & omset" src="laporan tahunan.jpeg" />
+          <h3>Laporan Penjualan & Omset 22 Cabang</h3>
+          <p>Template Excel dengan VLOOKUP untuk konsolidasi penjualan bulanan lintas cabang.</p>
+          <div class="tags"><span class="tag">Excel</span><span class="tag">VLOOKUP</span><span class="tag">Pivot</span><span class="tag">if else</span><span class="tag">Pelaporan</span></div>
+        </article>
+        <article class="card work" data-title="Koordinasi Perjalanan Dinas" data-desc="Checklist & Rundown Perjalanan Dinas standar untuk pemesanan tiket/hotel, briefing, dan laporan biaya pasca-dinas." data-tags="Rundown perjalanan dinas,Penganggaran" data-images="dinas.jpeg,ticket.jpeg">
+          <img alt="Koordinasi perjalanan dinas" src="dinas.jpeg" />
+          <h3>Koordinasi Perjalanan Dinas</h3>
+          <p>Checklist & Rundown Perjalanan Dinas standar untuk pemesanan tiket/hotel, briefing, dan laporan biaya.</p>
+          <div class="tags"><span class="tag">Rundown Perjalanan Dinas</span><span class="tag">Penganggaran</span>
+        </article>
+        <article class="card work" data-title="Presentasi Pimpinan" data-desc="Template slide PowerPoint untuk ringkasan eksekutif, dan tindak lanjut rapat." data-tags="PowerPoint,Ringkasan" data-images="ppt1.jpeg,ppt2.jpeg,ppt3.jpeg,ppt4.jpeg">
+          <img alt="Presentasi pimpinan" src="ppt1.jpeg" />
+          <h3>Presentasi Pimpinan</h3>
+          <p>Template slide PowerPoint untuk ringkasan eksekutif, KPI, dan tindak lanjut rapat.</p>
+          <div class="tags"><span class="tag">PowerPoint</span><span class="tag">KPI</span><span class="tag">Ringkasan</span></div>
+        </article>
+        <article class="card work" data-title="SOP Arsip & Korespondensi" data-desc="Panduan penamaan file, kontrol versi, dan alur surat-menyurat lintas cabang. Dan mengelompokkan dokumen tiap Branch" data-tags="SOP,Arsip Digital,Compliance" data-images="memo.jpeg,sp1.jpeg">
+          <img alt="SOP arsip & korespondensi" src="memo.jpeg" />
+          <h3>SOP Arsip & Korespondensi</h3>
+          <p>Panduan penamaan file, kontrol versi, dan alur surat-menyurat.</p>
+          <div class="tags"><span class="tag">SOP</span><span class="tag">Arsip Digital</span><span class="tag">Compliance</span></div>
+        </article>
+        <article class="card work" data-title="Akomodasi Rapat" data-desc="Seluruh akomodasi rapat ditanggung oleh panitia, mencakup konsumsi, perlengkapan rapat, dan dokumentasi. Untuk peserta dari luar kota, disediakan penginapan serta transportasi antar-jemput dari dan ke lokasi rapat. Fasilitas ini bertujuan untuk mendukung kenyamanan dan kelancaran pelaksanaan rapat." data-tags="Notulen Online Meeting,Follow-up" data-images="zoom.jpeg,zoom1.jpeg">
+          <img alt="Akomodasi Rapat" src="zoom.jpeg" />
+          <h3>Akomodasi Rapat</h3>
+          <p>Akomodasi untuk peserta luar kota sudah disiapkan berupa penginapan dan transportasi..</p>
+          <div class="tags"><span class="tag">Notulen Meeting Online</span><span class="tag">Follow up</span>
+        </article>
+        <!-- <article class="card work" data-title="Dashboard KPI Rapat" data-desc="Ringkasan visual kehadiran, keputusan, dan penyelesaian action items bulanan." data-tags="Dashboard,KPI,Eksekutif" data-images="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=1200&auto=format&fit=crop,https://images.unsplash.com/photo-1535303311164-664fc9ec6532?w=1200&auto=format&fit=crop">
+          <img alt="Dashboard sederhana KPI rapat" src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=1200&q=80&auto=format&fit=crop" />
+          <h3>Dashboard KPI Rapat</h3>
+          <p>Ringkasan visual kehadiran, keputusan, dan penyelesaian action items.</p>
+          <div class="tags"><span class="tag">Dashboard</span><span class="tag">KPI</span><span class="tag">Eksekutif</span></div>
+        </article> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container reveal">
+      <h2 class="section-title">Kontak</h2>
+      <p class="section-sub">Siap membantu prioritas Anda. Hubungi melalui detail berikut atau kirim pesan cepat.</p>
+      <div class="contact-wrap">
+        <div class="card">
+          <div class="contact-item"><span class="pill">Email</span> <div><a href="mailto:merycandraeni@gmail.com">merycandraeni@gmail.com</a></div></div>
+          <div class="contact-item"><span class="pill">Telepon</span> <div><a href="tel:+6282232208756">082232208756</a></div></div>
+          <div class="contact-item"><span class="pill">Lokasi</span> <div>Perumahan Gunung Sari Indah, Blok Q26 ,Surabaya (Kost) | Buluh Dakiring, Bangkalan, Madura (Domisili)</div></div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="mailto:merycandraeni@gmail.com">Kirim Email</a>
+            <a class="btn" style="background:linear-gradient(135deg,var(--khaki),var(--accent))" href="#hero">Kembali ke Atas</a>
+          </div>
+        </div>
+        <form class="card" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda sudah dikirim.');">
+          <label>Nama
+            <input type="text" placeholder="Nama Anda" required />
+          </label><br/>
+          <label>Email
+            <input type="email" placeholder="email@contoh.com" required />
+          </label><br/>
+          <label>Pesan
+            <textarea placeholder="Tulis pesan Anda..."></textarea>
+          </label><br/>
+          <button class="btn" type="submit">Kirim</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="container">© <span id="year"></span> Mery Diah Candraeni · Semua hak cipta dilindungi.</div></footer>
+
+  <div class="modal" id="pfModal" aria-hidden="true" role="dialog" aria-labelledby="pfTitle">
+    <div class="dialog">
+      <div class="dialog-header">
+        <div class="dialog-title" id="pfTitle">Judul</div>
+        <button class="dialog-close" type="button" aria-label="Tutup" onclick="closeModal()">✕</button>
+      </div>
+      <div class="dialog-body">
+        <div class="gallery" id="pfGallery"></div>
+        <div>
+          <h3 id="pfTitleDup" style="margin-top:0"></h3>
+          <p class="desc" id="pfDesc"></p>
+          <div id="pfTags" class="tags" style="margin-top:10px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} }); }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    const modal = document.getElementById('pfModal'); const g = document.getElementById('pfGallery'); const t = document.getElementById('pfTitle'); const t2 = document.getElementById('pfTitleDup'); const d = document.getElementById('pfDesc'); const tg = document.getElementById('pfTags');
+    function openModalFromCard(card){ const title=card.dataset.title||'Detail Proyek'; const desc=card.dataset.desc||''; const tags=(card.dataset.tags||'').split(',').filter(Boolean); const images=(card.dataset.images||'').split(',').filter(Boolean);
+      t.textContent=title; t2.textContent=title; d.textContent=desc; tg.innerHTML=''; tags.forEach(x=>{const s=document.createElement('span'); s.className='tag'; s.textContent=x.trim(); tg.appendChild(s);}); g.innerHTML=''; images.forEach(src=>{const img=document.createElement('img'); img.src=src.trim(); img.alt=title; g.appendChild(img);});
+      modal.classList.add('open'); document.body.classList.add('no-scroll'); modal.setAttribute('aria-hidden','false'); }
+    function closeModal(){ modal.classList.remove('open'); document.body.classList.remove('no-scroll'); modal.setAttribute('aria-hidden','true'); }
+    window.closeModal=closeModal;
+    modal.addEventListener('click', (e)=>{ if(e.target===modal){ closeModal(); }});
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('open')) closeModal(); });
+    document.querySelectorAll('.work').forEach(card=>{ card.addEventListener('click', ()=>openModalFromCard(card)); card.setAttribute('tabindex','0'); card.addEventListener('keypress',(e)=>{ if(e.key==='Enter') openModalFromCard(card); }); });
+  </script>
+</body>
+</html>
